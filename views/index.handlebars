@@ -1,0 +1,37 @@
+<nav class="navbar navebar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">Mongo Scraper</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="active">
+				<a href="/">Home</a>
+			</li>
+			<li>
+				<a href="/saved">Saved Articles</a>
+			</li>
+			<li>
+				<a class="btn btn-danger scrape-new">SAVED NEW ARTICLES!</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<div class="jumbotron text-center">
+	<div class="overlay"></div>
+	<div class="background-image"></div>
+	<div class="caption">
+		<h1>Mongo Scraper</h1>
+		<p>New Times Edition</p>
+	</div>
+</div>
+
+<div class="container-fluid article-container">
+	{{#each article}}
+</div>
+
+<footer class="footer">
+	<div class="container">
+		<p>New York Times Scraper</p>
+	</div>
+</footer>
