@@ -41,8 +41,8 @@ app.engine("handlebars", exphbs({
 app.set("view engine", "handlebars");
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://heroku_jmv816f9:5j1nd4taq42hi29bfm5hobeujd@ds133192.mlab.com:33192/heroku_jmv816f9");
-//mongoose.connect("mongodb://localhost/mongoscraper");
+//mongoose.connect(" mongodb://heroku_3vng4fvx:c543vrtq801hrmu68k6mmhr3j9@ds235775.mlab.com:35775/heroku_3vng4fv"x);
+mongoose.connect("mongodb://localhost/mongoscraper");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -65,7 +65,7 @@ app.get("/", function(req, res) {
       article: data
     };
     console.log(hbsObject);
-    res.render("home", hbsObject);
+    res.render("index", hbsObject);
   });
 });
 
@@ -112,7 +112,7 @@ app.get("/scrape", function(req, res) {
       });
 
     });
-        res.send("Scrape Complete");
+        res.render("index");
 
   });
   // Tell the browser that we finished scraping the text
@@ -128,7 +128,7 @@ app.get("/articles", function(req, res) {
     }
     // Or send the doc to the browser as a json object
     else {
-      res.json(doc);
+      res.render("index", doc);
     }
   });
 });

@@ -1,5 +1,3 @@
-
-
 $("#scrape").on("click", function() {
     $.ajax({
         method: "GET",
@@ -10,7 +8,11 @@ $("#scrape").on("click", function() {
     })
 });
 
-
+//Set clicked nav option to active
+$(".navbar-nav li").click(function() {
+   $(".navbar-nav li").removeClass("active");
+   $(this).addClass("active");
+});
 
 //Handle Save Article button
 $(".save").on("click", function() {
